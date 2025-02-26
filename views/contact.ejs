@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakta oss</title>
+
+    <script type="module" crossorigin src="/assets/contact-CvdoDyOv.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/header-D3uMKXAI.js">
+    <link rel="stylesheet" crossorigin href="/assets/header-BfYZ9aHk.css">
+    <link rel="stylesheet" crossorigin href="/assets/contact-B_ITNG32.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__container"></div>
+    </header>
+    <div class="contact-page">
+      <h1 class="contact-page__title"></h1>
+      <form
+        class="contact-form"
+        method="POST"
+        action="/submit"
+        id="contactForm"
+        novalidate
+      >
+        <label class="contact-form__label--name"></label>
+        <input type="text" name="name" id="name" required />
+        <span class="error-message" id="nameError"></span>
+
+        <label class="contact-form__label--email"></label>
+        <input type="email" name="email" id="email" required />
+        <span class="error-message" id="emailError"></span>
+
+        <label class="contact-form__label--phoneNumber"></label>
+        <input type="tel" name="phoneNumber" id="phoneNumber" />
+        <span class="error-message" id="phoneNumberError"></span>
+
+        <label class="contact-form__label--topic"></label>
+        <input type="topic" name="topic" id="topic" required />
+        <span class="error-message" id="topicError"></span>
+
+        <label class="contact-form__label--message"></label>
+        <textarea name="message" id="message" required></textarea>
+        <span class="error-message" id="messageError"></span>
+
+        <button
+          class="contact-form__button"
+          type="submit"
+          id="submitButton"
+          disabled
+        ></button>
+      </form>
+    </div>
+    <footer class="footer"></footer>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= movie.attributes.title %> - Retro Bio</title>
+  <style>
+    .movieSection {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+    
+    .movieSection img {
+      width: 400px;
+      height: 600px;
+      object-fit: cover;
+      display: block;
+      margin: 2rem auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .movieSection h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .movieSection h3 {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+    
+    .movieSection p {
+      max-width: 800px;
+      margin: 1rem auto;
+      line-height: 1.6;
+    }
+    
+    .back-button {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin-top: 2rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    
+    .back-button:hover {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <section class="movieSection">
+    <h1><%= movie.attributes.title %></h1>
+    <img 
+      src="<%= movie.attributes.image.url %>" 
+      alt="<%= movie.attributes.title %>"
+    >
+    <h3>Intro:</h3>
+    <p><%= movie.attributes.intro || movie.attributes.description %></p>
+    <a href="/" class="back-button">← Back to Movies</a>
+  </section>
+</body>
+</html>

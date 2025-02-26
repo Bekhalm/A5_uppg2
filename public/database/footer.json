@@ -1,39 +1,51 @@
 {
-    "sections": [
-      {
-        "title": "Kontakt",
-        "links": [
-          { "text": "RETRO -Filmer från förr-", "url": "#" },
-          { "text": "Fiskartorget 1", "url": "#" },
-          { "text": "722 12 Västerås", "url": "#" },
-          { "text": "Tel: 123 45 56", "url": "#" }
-        ]
-      },
-      {
-        "title": "För företag",
-        "links": [
-          { "text": "Företagsbiljetter", "url": "#" },
-          { "text": "Möten och event", "url": "#" },
-          { "text": "Bioreklam", "url": "#" }
-        ]
-      },
-      {
-        "title": "Hjälp och kontakt",
-        "links": [
-          { "text": "Kundservice", "url": "#" },
-          { "text": "Cookiepolicy", "url": "#" },
-          { "text": "Personliguppgiftspolicy", "url": "#" },
-          { "text": "Kontakta oss", "url": "/Group-d-assignment/contact.html" }
-        ]
-      },
-      {
-        "title": "Sociala medier",
-        "links": [
-          { "text": "TikTok", "url": "#" },
-          { "text": "Facebook", "url": "#" },
-          { "text": "Instagram", "url": "#" }
-        ]
-      }
-    ]
+  "sections": [
+    {
+      "title": "Kontakt",
+      "links": [
+        { "text": "RETRO -Filmer från förr-", "url": "#" },
+        { "text": "Fiskartorget 1", "url": "#" },
+        { "text": "722 12 Västerås", "url": "#" },
+        { "text": "Tel: 123 45 56", "url": "#" }
+      ]
+    },
+    {
+      "title": "För företag",
+      "links": [
+        { "text": "Företagsbiljetter", "url": "#" },
+        { "text": "Möten och event", "url": "#" },
+        { "text": "Bioreklam", "url": "#" }
+      ]
+    },
+    {
+      "title": "Hjälp och kontakt",
+      "links": [
+        { "text": "Kundservice", "url": "#" },
+        { "text": "Cookiepolicy", "url": "#" },
+        { "text": "Personliguppgiftspolicy", "url": "#" },
+        { "text": "Kontakta oss", "url": "/page-contact" }
+      ]
+    },
+    {
+      "title": "Sociala medier",
+      "links": [
+        { "text": "TikTok", "url": "#" },
+        { "text": "Facebook", "url": "#" },
+        { "text": "Instagram", "url": "#" }
+      ]
+    }
+  ],
+  "contact": {
+    "email": "info@retrobio.se",
+    "phone": "021-123 45 67"
+  },
+  "address": {
+    "street": "Retrovägen 1",
+    "city": "722 12 Västerås"
+  },
+  "social": {
+    "facebook": "#",
+    "instagram": "#",
+    "twitter": "#"
   }
-  
+}

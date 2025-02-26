@@ -2,11 +2,11 @@
     "NavItems": {
         "en":[
             
-               { "name":"Start", "href":"/Group-d-assignment/index.html"},
+               { "name":"Start", "href":"/"},
                { "name":"Movies", "href":"#2"},
-               { "name":"Dining", "href":"/Group-d-assignment/cafe.html"},
-               { "name":"About us", "href":"/Group-d-assignment/about.html"},
-               { "name":"Contact", "href":"/Group-d-assignment/contact.html"},
+               { "name":"Dining", "href":"/page-cafe"},
+               { "name":"About us", "href":"/page-about"}, 
+               { "name":"Contact", "href":"/page-contact"}, 
                { "name":"Open hours", "href":"#6"}
                
              
@@ -14,13 +14,21 @@
             
         ],
         "sv":[
-            {"name":"Start","href":"/Group-d-assignment/index.html" },
+            {"name":"Start","href":"/" },
             {"name":"Filmer","href":"#2" },
-            {"name":"Servering","href":"/Group-d-assignment/cafe.html" },
-            {"name":"Om oss","href":"/Group-d-assignment/about.html" },
-            {"name":"Kontakt","href":"/Group-d-assignment/contact.html" },
+            {"name":"Servering","href":"/page-cafe" },
+            {"name":"Om oss","href":"/page-about" },
+            {"name":"Kontakt","href":"/page-contact" },
             {"name":"Öppettider","href":"#6" }
             
         ]
+    },
+    "sv": {
+        "links": [
+            { "text": "Aktuella filmer", "href": "#ongoingMoviesSection" },
+            { "text": "Kommande filmer", "href": "#upcomingMoviesSection" },
+            { "text": "Om oss", "href": "#about" },
+            { "text": "Kontakt", "href": "#contact" }
+        ]
     }
-    }
+}

@@ -2,7 +2,7 @@ import "../styles/nav.scss";
 
 export async function loadNavbar() {
   try {
-    const response = await fetch("/Group-d-assignment/database/nav.json");
+    const response = await fetch("/database/nav.json");
     if (!response.ok) {
       throw new Error("Something went wrong");
     }
@@ -42,3 +42,17 @@ export async function loadNavbar() {
     console.error("Error:", error);
   }
 }
+
+const fetchNavData = async () => {
+    try {
+        const response = await fetch('/database/nav.json');
+        if (!response.ok) {
+            throw new Error('Something went wrong');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error:', error);
+        throw error;
+    }
+};

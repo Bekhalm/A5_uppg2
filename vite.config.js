@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/Group-d-assignment',
+  base: '/', //'/Group-d-assignment',
   build: {
     sourcemap: true,
     rollupOptions: {

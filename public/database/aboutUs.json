@@ -4,20 +4,20 @@
       "introduction": {
         "title": "Introduction",
         "content": "Step back in time to the golden age of Hollywood at Retro Cinema. Our retro cinema is a sanctuary for movie lovers, offering an unforgettable experience that celebrates the classics and the spirit of yesteryear.",
-        "src": "/Group-d-assignment/images/about-us-img/cinema-seatings.png",
+        "src": "/static/images/about-us-img/cinema-seatings.png",
 
         "alt": "A classic cinema interior with vintage seats and decor"
       },
       "origin": {
         "title": "Origin",
         "content": "Established in 1925, Retro Cinema began as a family-run theater showcasing the latest blockbusters of its time. Over the decades, it has transformed into a beloved landmark, preserving the glamour of vintage cinema for future generations. Every corner of Retro Cinema exudes nostalgia, from our authentic 1950s decor to the old-school concession stand serving classic snacks. Our curated selection of iconic films ensures that every visit is a trip down memory lane.",
-        "src": "/Group-d-assignment/images/about-us-img/retro-1925.png",
+        "src": "/static/images/about-us-img/retro-1925.png",
         "alt": "An old poster of the Retro Cinema building painted in 1925"
       },
       "vision": {
         "title": "Vision",
         "content": "At Retro Cinema, our mission is to keep the magic of classic cinema alive. We strive to create a welcoming space where movie lovers of all ages can come together and celebrate the timeless art of storytelling.",
-        "src": "/Group-d-assignment/images/about-us-img/crowd.jpg",
+        "src": "/static/images/about-us-img/crowd.jpg",
         "alt": "A group of movie enthusiasts enjoying a classic film screening"
       }
     },
@@ -25,19 +25,19 @@
       "introduction": {
         "title": "Introduktion",
         "content": "Ta ett steg tillbaka i tiden till Hollywoods guldålder på Retro Cinema. Vårt retrobiograf är en fristad för filmälskare och erbjuder en oförglömlig upplevelse som hyllar klassikerna och gårdagens anda.",
-        "src": "/Group-d-assignment/images/about-us-img/cinema-seatings.png",
+        "src": "/static/images/about-us-img/cinema-seatings.png",
         "alt": "En klassisk biografinteriör med vintage-stolar och dekorationer"
       },
       "origin": {
         "title": "Ursprung",
         "content": "Grundat 1925 började Retro Cinema som en familjeägd teater som visade de senaste storfilmerna från sin tid. Under årtiondena har det förvandlats till ett älskat landmärke som bevarar vintagebiografens glamour för framtida generationer. Varje hörn av Retro Cinema andas nostalgi, från vår autentiska 1950-talsinredning till den gammaldags kiosken som serverar klassiska snacks. Vårt noggrant utvalda urval av ikoniska filmer säkerställer att varje besök är en resa tillbaka i tiden.",
-        "src": "/Group-d-assignment/images/about-us-img/retro-1925.png",
+        "src": "/static/images/about-us-img/retro-1925.png",
         "alt": "En gammal affisch av Retro Cinema-byggnaden målad 1925"
       },
       "vision": {
         "title": "Vision",
         "content": "På Retro Cinema är vårt uppdrag att hålla magin i klassisk film vid liv. Vi strävar efter att skapa en välkomnande plats där filmälskare i alla åldrar kan samlas och fira den tidlösa konsten att berätta historier.",
-        "src": "/Group-d-assignment/images/about-us-img/crowd.jpg",
+        "src": "/static/images/about-us-img/crowd.jpg",
         "alt": "En grupp filmälskare som njuter av en klassisk filmvisning"
       }
     }

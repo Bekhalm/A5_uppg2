@@ -1,5 +1,5 @@
 import '../styles/ongoingMovies.scss';
-import { initializeMovieData, moviesArray } from './main.js';
+import { fetchMovieData, moviesArray } from './movies.js';
 import { observer } from './helpers/animations/fadeIn.js';
 
 const ongoingMoviesDom = document.querySelector(".ongoingMovies"); 
@@ -8,53 +8,51 @@ let genres = [];
 let decades = [];
 
 const useData = async () => {
-    await initializeMovieData();
+    await fetchMovieData();
+    console.log("Data loaded from API, initializing movies");
+    InitializeOngoingMovies();
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-    useData().then((data) => InitializeOngoingMovies());
-});
+document.addEventListener("DOMContentLoaded", useData);
 
 function InitializeOngoingMovies() {
-    createGenres();
-    createDecades();
-    createFilterProps();
+    console.log("Movies array:", moviesArray);
+    
+    if (!moviesArray.data || moviesArray.data.length === 0) {
+        console.log("No movies found");
+        return;
+    }
 
-    for (let currentIndex = 0; currentIndex < moviesArray["movies"].length; currentIndex++) {
-        const element = moviesArray["movies"][currentIndex];
-
-        createMovieCard({
-            src: element.coverimage,
-            movieLabel: element.title,
-            data: element,
-        })
-    };
+    // Use the first 8 movies as "now showing"
+    const ongoingMovies = moviesArray.data.slice(0, 8);
+    
+    ongoingMovies.forEach(movie => {
+        createMovieCard(movie);
+    });
 }
 
-function createMovieCard(props) {
+function createMovieCard(movie) {
+    console.log("Creating card for movie:", movie);
+    
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("ongoingMovies__card");
-    ongoingMoviesDom.appendChild(cardDiv);
-
-
-    const cardImage = document.createElement("img");
-    cardImage.src = props.src;
-    cardImage.classList.add("ongoingMovies__card__image")
-    cardDiv.appendChild(cardImage);
-
-    cardImage.addEventListener("click", () => {
-        // Open Modal for future()
-        // OpenInformationModal(props.data);
-    });
-
-    const cardLabel = document.createElement("h3");
-    cardLabel.innerHTML = props.movieLabel; 
-    cardLabel.classList.add("ongoingMovies__card__label");
-    cardDiv.appendChild(cardLabel);
+    cardDiv.style.cursor = 'pointer';
     
-    cardLabel.addEventListener("click", () => {
-        // Open Modal for future()
-        // OpenInformationModal(props.data);
+    const cardImage = document.createElement("img");
+    cardImage.src = movie.attributes.image.url;
+    cardImage.classList.add("ongoingMovies__card__image");
+    cardImage.alt = movie.attributes.title;
+    
+    const cardLabel = document.createElement("h3");
+    cardLabel.textContent = movie.attributes.title;
+    cardLabel.classList.add("ongoingMovies__card__label");
+    
+    cardDiv.appendChild(cardImage);
+    cardDiv.appendChild(cardLabel);
+    ongoingMoviesDom.appendChild(cardDiv);
+    
+    cardDiv.addEventListener('click', () => {
+        window.location.href = `/movie/${movie.id}`;
     });
     
     observer.observe(cardDiv);

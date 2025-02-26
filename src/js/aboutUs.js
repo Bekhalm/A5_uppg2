@@ -95,4 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM fully loaded and parsed');
   loadAboutUsPage();
   // createFooter();
+
+  const aboutSection = document.querySelector('.about');
+  
+  // Only try to prepend if the about section exists
+  if (aboutSection) {
+    const title = document.createElement('h2');
+    title.textContent = 'Om oss';
+    title.classList.add('about__title');
+    aboutSection.prepend(title);
+  }
 });

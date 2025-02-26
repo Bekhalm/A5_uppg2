@@ -1,4 +1,4 @@
-import "../styles/main.scss";
+//import "../styles/main.scss";
 import "./aboutUs.js";
 import './header.js';
 import "./ongoingMovies.js";

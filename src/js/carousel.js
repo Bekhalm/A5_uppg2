@@ -28,9 +28,9 @@ buttons.forEach(button => {
 // Function to fetch movie data and populate the carousel
 const populateCarousel = async () => {
   try {
-    const response = await fetch('/Group-d-assignment/database/movies.json');
+    const response = await fetch('/images/sliders/movies.json');
     const jsonData = await response.json();
-    console.log('Movies jsonData fetched:', jsonData.movies);
+    console.log('Movies jsonData fetched:', jsonData);
 
     const slides = document.querySelectorAll(".slides .slide");
 
@@ -59,3 +59,52 @@ const populateCarousel = async () => {
 
 // Initialize the carousel when the page is loaded
 populateCarousel();
+
+const slides = document.querySelectorAll('.slide');
+
+// Define the slider content directly in the code
+const sliderContent = [
+    {
+        title: 'A Study in Scarlet',
+        length: '120 min',
+        image: '/images/sliders/studie.jpg'
+    },
+    {
+        title: 'Psycho',
+        length: '109 min',
+        image: '/images/sliders/psycho.jpg'
+    },
+    {
+        title: 'Singing in the Rain',
+        length: '103 min',
+        image: '/images/sliders/singing.jpg'
+    }
+];
+
+// Update slides with content
+slides.forEach((slide, index) => {
+    if (sliderContent[index]) {
+        const content = sliderContent[index];
+        
+        // Set background image
+        slide.style.backgroundImage = `url('${content.image}')`;
+        
+        // Create or update title
+        let titleElement = slide.querySelector('.slide-title');
+        if (!titleElement) {
+            titleElement = document.createElement('h2');
+            titleElement.classList.add('slide-title');
+            slide.appendChild(titleElement);
+        }
+        titleElement.textContent = content.title;
+        
+        // Create or update length
+        let lengthElement = slide.querySelector('.slide-length');
+        if (!lengthElement) {
+            lengthElement = document.createElement('p');
+            lengthElement.classList.add('slide-length');
+            slide.appendChild(lengthElement);
+        }
+        lengthElement.textContent = content.length;
+    }
+});

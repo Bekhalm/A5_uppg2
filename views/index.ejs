@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro - biografen som visar filmer från förr -</title> 
+  <meta
+    name="description"
+    content="Retro biografen ligger i Västerås och visar filmer från förr"
+  />
+  <meta
+    name="keywords"
+    content="Biograf, retro, 50-tal, 70-tal, 80-tal, 90-tal, 00-tal, Västerås"
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  
+  <!-- Vite links -->
+  <script type="module" crossorigin src="/assets/main-B_EonzRl.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/header-Dv_YrbLt.js">
+  <link rel="modulepreload" crossorigin href="/assets/languageToggleBtn-CJhW3R8M.js">
+  <link rel="modulepreload" crossorigin href="/assets/aboutUs-DuKiNp0r.js">
+  <link rel="stylesheet" href="/assets/header-BfYZ9aHk.css">
+  <link rel="stylesheet" href="/assets/aboutUs-BAnimoIJ.css">
+  <link rel="stylesheet" href="/assets/languageToggleBtn-Cq9ijXSs.css">
+  <link rel="stylesheet" href="/assets/main-DKubGrik.css">
+  
+  <!-- JavaScript import -->
+  <script type="module" src="/src/js/main.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__container"></div>
+  </header>
+
+  <!-- Karusell topcontent -->
+  <section class="newest">
+    <div class="carousel">
+      <div class="slides">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+      </div>
+      <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+      <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+    </div>
+  </section>
+
+  <!-- Filmer som visas nu -->
+  <section class="ongoingMoviesSection" id="ongoingMoviesSection">
+    <h2 class="ongoingMoviesSection__header">Filmer som visas nu</h2>
+    <div class="ongoingMovies">
+      <% movies.forEach(movie => { %>
+        <div class="ongoingMovies__card">
+          <img 
+            src="<%= movie.attributes.image.url %>" 
+            class="ongoingMovies__card__image" 
+            alt="<%= movie.attributes.title %>"
+          >
+          <h3 class="ongoingMovies__card__label">
+            <%= movie.attributes.title %>
+          </h3>
+        </div>
+      <% }); %>
+    </div>
+  </section>
+
+  <section class="gift-section">
+    <h2 class="gift-section__header">BIOGÅVA</h2>
+    <div class="gift-section__img-container">
+      <img class="gift-section__gift-image" src="/images/popcorn.png"/>
+      <p class="gift-section__gift-text">
+        Ge bort en bioupplevelse till någon du bryr dig om!
+      </p>
+    </div>
+    <button class="gift-section__gift-button">Köp en gåva</button>
+  </section>
+
+  <footer class="footer"></footer>
+
+ 
+</body>
+</html>

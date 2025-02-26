@@ -23,26 +23,46 @@ section.newest {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 1200px; /* Increased max-width for better design scaling */
+    height: 500px; // Adjust height as needed
     overflow: hidden;
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for a more modern look */
 }
 
 /* Slide Container */
 .slides {
     display: flex;
-    transition: transform 0.6s ease-in-out; /* Smoother transition */
+    height: 100%;
 }
 
 /* Individual Slide */
 .slide {
-    min-width: 100%;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60vh; /* Slightly increased height for a more balanced layout */
+    flex: 0 0 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    .slide-title {
+        position: absolute;
+        bottom: 60px; // Adjust as needed
+        left: 20px;
+        color: white;
+        font-size: 2rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        z-index: 2;
+        margin: 0;
+    }
+    
+    .slide-length {
+        position: absolute;
+        bottom: 20px; // Adjust as needed
+        left: 20px;
+        color: white;
+        font-size: 1.2rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        z-index: 2;
+        margin: 0;
+    }
 }
 
 /* Image Styling */

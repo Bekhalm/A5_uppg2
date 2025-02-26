@@ -3,7 +3,7 @@ import { observer } from './helpers/animations/fadeIn.js';
 /*
  * Originally made by Magnus Olofsson, modified by Nils Nyberg.
  */
-
+ /*
 const upcomingMoviesDom = document.querySelector(".upcomingMovies");
 
 const moviesArray = [
@@ -49,3 +49,4 @@ function createMovieCard(props) {
   cardDiv.appendChild(cardLabel);
   observer.observe(cardDiv);
 }
+*/
