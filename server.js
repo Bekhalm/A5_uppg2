@@ -1,19 +1,19 @@
-import express from 'express';
-import path from 'path';
+import express from 'express'; // importerar express ramverk. 
+import path from 'path'; // Path modul för filvägar.
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
+const __filename = fileURLToPath(import.meta.url);   //Detta för att hitta rätt filvägar, sker ej automatiskt pga ES-moduler.
 const __dirname = path.dirname(__filename);
 
-const app = express();
-const port = 5080;
+const app = express(); // Skapar express app
+const port = 5080;  //Min valda port
 
-// EJS
+// EJS som template 
 app.set('view engine', 'ejs');
 
-// Debug image path
+
 const imagePath = path.join(__dirname, 'public/images');
-console.log('Serving images from:', imagePath);
+console.log('Serving images from:', imagePath); // Debuggar för bildernas väg.
 
 // Serve static files
 app.use('/assets', express.static(path.join(__dirname, 'dist/assets')));
@@ -25,19 +25,19 @@ app.use(express.static('dist'));
 
 app.use('/images/sliders', express.static(path.join(__dirname, 'public/images/sliders'))); // Slider images
 
-// Main route
+// Visa filmerna på första sidan, hämtade från api:et.
 app.get('/', async (req, res) => {
     try {
-        const response = await fetch('https://plankton-app-xhkom.ondigitalocean.app/api/movies');
+        const response = await fetch('https://plankton-app-xhkom.ondigitalocean.app/api/movies'); //Hämtar filmer från API, fetch för senaste uppdateringar.
         const data = await response.json();
-        res.render('index', { 
+        res.render('index', {    //res.render för att skicka data till EJS.
             movies: data.data,
             paths: {
                 images: '/images',
                 sliders: '/images/sliders'
             }
         });
-    } catch (error) {
+    } catch (error) {     //Debugg, skickar tom lista om något går fel.
         console.error('Error:', error);
         res.render('index', { 
             movies: [],
@@ -49,7 +49,7 @@ app.get('/', async (req, res) => {
     }
 });
 
-// Movie route
+
 app.get('/movie/:id', async (req, res) => {
     try {
         const movieId = req.params.id;
@@ -77,7 +77,7 @@ app.get('/movie/:id', async (req, res) => {
 
 if (process.env.NODE_ENV !== 'test') {
     app.listen(port, () => {
-        console.log(`Server is running at http://localhost:${port}`);
+        console.log(`Server is running at http://localhost:${port}`);  //Startar servern.
     });
 }
 
